@@ -10,7 +10,7 @@ pip install tapioca-iugu
 from tapioca_iugu import Iugu
 
 
-api = Iugu(user='apitoken', password='')
+api = Iugu(user='apitoken')
 
 ```
 

@@ -22,7 +22,7 @@ class IuguClientAdapter(JSONAdapterMixin, TapiocaAdapter):
         return params
 
     def get_iterator_list(self, response_data):
-        return response_data
+        return response_data.get('items', response_data)
 
     def get_iterator_next_request_kwargs(self, iterator_request_kwargs,
                                          response_data, response):
@@ -31,8 +31,8 @@ class IuguClientAdapter(JSONAdapterMixin, TapiocaAdapter):
 
         start = iterator_request_kwargs['params'].get('start', 0)
         total_items = response_data.get('totalItems')
-        items = len(response_data.get('items')) + start
-        if total_items > items:
+        items = len(response_data.get('items'))
+        if total_items >= items + start:
             iterator_request_kwargs['params']['start'] = start + items
             return iterator_request_kwargs
 
