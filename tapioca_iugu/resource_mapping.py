@@ -236,6 +236,11 @@ RESOURCE_MAPPING = {
         'docs': 'https://iugu.com/referencias/api#atualização-de-dados-bancários',
         'methods': ['POST']
     },
+    'marketplace_account_financial': {
+        'resource': 'accounts/financial',
+        'docs': '',
+        'methods': ['GET']
+    },
     'withdraw_request_list': {
         'resource': 'withdraw_requests',
         'docs': 'https://iugu.com/referencias/api#listar-transferências',
