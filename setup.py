@@ -73,7 +73,7 @@ setup(
     long_description=readme,
     author=get_author(package),
     author_email=get_email(package),
-    url='https://github.com/solidarium/tapioca-iugu',
+    url='https://github.com/olist/tapioca-iugu',
     packages=[
         'tapioca_iugu',
     ],
